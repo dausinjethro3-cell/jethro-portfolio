@@ -1,4 +1,56 @@
-body {
-  background-color: pink;
+html {
+  scroll-behavior: smooth;
 }
-  
+body {
+  background-color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 30px;
+  font-family: Poppins;
+}
+header {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.973);
+  position: sticky;
+  top: 0px;
+  height: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin-right: 5px;
+  font-size: clamp(1px 2vw 16px);
+  transition: 0.3s;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.062);
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  color: rgb(61, 61, 61);
+}
+.homebox {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: clamp(300px, 25vh, 1000px);
+  width: 90%;
+  margin-bottom: 100px;
+}
+.name{
+  position: absolute;
+  font-size: clamp(50px, 4vw, 55px);
+  font-weight: 900;
+}
+.want{
+  position: relative;
+  font-size: clamp(15px, 1.3vw, 23px);
+  font-weight: 900
+}

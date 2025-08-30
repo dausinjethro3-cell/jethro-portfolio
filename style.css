@@ -39,19 +39,23 @@ nav a:hover {
   display: flex;
   justify-content: right;
   align-items: flex-end;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
   height: clamp(300px, 25vh, 1000px);
-  width: 90%;
+  width: 100%;
   margin-bottom: 100px;
 }
 .name{
+  padding-bottom: 1px;
   position: absolute;
-  font-size: clamp(25px, 4vw, 55px);
+  font-size: clamp(10px, 4vw, 55px);
   font-weight: 900;
 }
 .want{
   position: relative;
-  font-size: clamp(5px, 1.3vw, 23px);
-  font-weight: 900
+  font-size: clamp(2px, 1.4vw, 25px);
+  font-weight: 900;
+}
+.name, .want {
+  margin-right: 20px;
 }

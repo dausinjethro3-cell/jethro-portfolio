@@ -60,16 +60,14 @@ nav a:hover {
 .person {
   display: flex;
   flex-direction: inline;
-  margin-bottom: 50%;
-  margin-top: 10%;
+  margin-bottom: clamp(70px, 25%, 300px);
+  margin-top: 3%;
 }
-
 .name{
   padding-bottom: 0.4%;
   position: absolute;
   font-size: clamp(10px, 4vw, 55px);
   font-weight: 900;
-
 }
 .want{
   position: relative;

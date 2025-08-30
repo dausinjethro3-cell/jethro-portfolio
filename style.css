@@ -17,7 +17,7 @@ header {
   height: 100%;
   padding-top: 8px;
   padding-bottom: 8px;
-  z-index: 1;
+  z-index: 2;
 }
 nav a {
   text-decoration: none;
@@ -26,25 +26,54 @@ nav a {
   margin-right: 2px;
   margin-left: 2px;
   font-size: clamp(1px 2vw 16px);
+  padding: -1%;
   transition: 0.3s;
 }
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.062);
   border-radius: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   padding: 5px;
   color: rgb(61, 61, 61);
+  border-style: solid;
+  transition: 150ms;
+  transition-delay: 0ms;
 }
 .picture {
   height: 15%;
   width:35%;
   border-width: 20%;
   border-radius: 50px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.493);
   display: flex;
   align-items: center;
   margin-left: 5%;
+  animation: picture-appear both;
+  animation-duration: 1100ms;
+  animation-delay: 0.6s;
 }
+@keyframes picture-appear {
+  from {
+    scale: 0;
+    transform: translateY(0px);
+  }
+  to {
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+.picture:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) -3px 0px 7px,
+  rgba(0, 0, 0, 0.12) 0px 3px 7px,
+  rgba(0, 0, 0, 0.17) 3px 0px 7px,
+  rgba(0, 0, 0, 0.09) 0px 0px 7px; 
+  transition-duration: 300ms;
+  transition-delay: 0ms;
+}
+
 .homebox {
   display: flex;
   justify-content: right;
@@ -52,8 +81,9 @@ nav a:hover {
   padding-left: 0px;
   padding-right: 0px;
   height: 15%clamp(300px, 25vh, 1000px);
-  width: 50%;
+  width: 42%;
   margin-bottom: 20%;
+  margin-left: 10%;
   background-color: rgb(255, 255, 255);
   position: relative;
 }
@@ -68,12 +98,56 @@ nav a:hover {
   position: absolute;
   font-size: clamp(10px, 4vw, 55px);
   font-weight: 900;
+  animation: text-appear1 both;
+  animation-duration: 800ms;
+  animation-delay: 500ms;
 }
 .want{
   position: relative;
   font-size: clamp(2px, 1.4vw, 20px);
   font-weight: 700;
+  animation: text-appear2 both;
+  animation-duration: 1200ms;
+  animation-delay: 600ms;
 }
 .name, .want {
   margin-right: 1.5%;
+
+  }
+@keyframes text-appear1 {
+  from {
+    opacity: 0;
+    transform: translateY(-3000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes text-appear2 {
+  from {
+    opacity: 0;
+    transform: translateY(3000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.nande {
+  color: black;
+}
+.aboutbox, .educbox, .journeybox, .contactbox {
+  animation: page-appear both;
+  animation-timeline: view(5% 10%)
+}
+@keyframes page-appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

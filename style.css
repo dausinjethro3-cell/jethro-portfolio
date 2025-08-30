@@ -46,11 +46,11 @@ nav a:hover {
 }
 .name{
   position: absolute;
-  font-size: clamp(50px, 4vw, 55px);
+  font-size: clamp(25px, 4vw, 55px);
   font-weight: 900;
 }
 .want{
   position: relative;
-  font-size: clamp(15px, 1.3vw, 23px);
+  font-size: clamp(5px, 1.3vw, 23px);
   font-weight: 900
 }

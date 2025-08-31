@@ -14,42 +14,40 @@ header {
   background-color: rgba(255, 255, 255, 0.973);
   position: sticky;
   top: 0px;
-  height: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 1%;
+  padding-bottom: 1%;
   z-index: 2;
 }
 nav a {
   text-decoration: none;
   color: black;
   font-weight: 600;
-  margin-right: 2px;
-  margin-left: 2px;
-  font-size: clamp(1px 2vw 16px);
+  margin-right: 1px;
+  margin-left: 1px;
+  font-size: clamp(1px 2vw 50px);
   padding: -1%;
-  transition: 0.3s;
+  transition: 200ms;
 }
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.062);
   border-radius: 50px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
   padding: 5px;
   color: rgb(61, 61, 61);
-  border-style: solid;
   transition: 150ms;
-  transition-delay: 0ms;
+  transition-delay: 20ms;
 }
 .picture {
   height: 15%;
-  width:35%;
+  width:25%;
   border-width: 20%;
-  border-radius: 50px;
+  border-radius: 15%;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.493);
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 10%;
   animation: picture-appear both;
   animation-duration: 1100ms;
   animation-delay: 0.6s;
@@ -80,10 +78,12 @@ nav a:hover {
   align-items: flex-end;
   padding-left: 0px;
   padding-right: 0px;
-  height: 15%clamp(300px, 25vh, 1000px);
-  width: 42%;
+  padding-bottom: 0px;
+  padding-top: 8%;
+  width: 53%;
   margin-bottom: 20%;
-  margin-left: 10%;
+  margin-left: 2%;
+  margin-top: 20%;
   background-color: rgb(255, 255, 255);
   position: relative;
 }
@@ -94,18 +94,21 @@ nav a:hover {
   margin-top: 3%;
 }
 .name{
-  padding-bottom: 0.4%;
+  padding-bottom: 12%;
   position: absolute;
-  font-size: clamp(10px, 4vw, 55px);
+  font-size: clamp(5px, 4.7vw, 300px);
   font-weight: 900;
+  z-index: 1;
   animation: text-appear1 both;
   animation-duration: 800ms;
   animation-delay: 500ms;
 }
 .want{
   position: relative;
-  font-size: clamp(2px, 1.4vw, 20px);
+  font-size: clamp(2px, 3vw, 150px);
   font-weight: 700;
+  z-index: 1;
+
   animation: text-appear2 both;
   animation-duration: 1200ms;
   animation-delay: 600ms;
@@ -150,4 +153,9 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+footer {
+  background-color: black;
+  height: clamp(100px, 35vh, 300px);
+  width: 100%;
 }

@@ -25,7 +25,7 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: 600;
-  font-size: clamp(1px 2vw 50px);
+  font-size: clamp(1px, 2vw, 50px);
   transition: 200ms;
 }
 nav a:hover {
@@ -282,4 +282,5 @@ footer {
   background-color: rgba(0, 0, 0, 0);
   height: clamp(100px,45vh, 300px);
   width: 100%;
+
 }

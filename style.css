@@ -1,0 +1,285 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 30px;
+  font-family: Poppins;
+}
+header {
+  background-color: rgba(236, 236, 236, 0.973);
+  position: sticky;
+  top: 0px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  z-index: 2;
+}
+.navigation {
+  text-align: center;
+}
+nav a {
+  padding-left: auto;
+  padding-right: auto;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: clamp(1px 2vw 50px);
+  transition: 200ms;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.062);
+  border-radius: 50px;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 5px;
+  color: rgb(61, 61, 61);
+}
+nav a:active {
+  padding: 2px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  color: rgb(61, 61, 61);
+}
+nav a.active {
+  padding: 2px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  color: rgb(128, 128, 128);
+}
+.picture {
+  height: 15%;
+  width:25%;
+  border-width: 20%;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  animation: picture-appear both;
+  animation-duration: 1500ms;
+  animation-delay: 1s;
+  transition: 800ms;
+  margin-top: 40%;
+}
+@keyframes picture-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.picture:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) -3px 0px 7px,
+  rgba(0, 0, 0, 0.12) 0px 3px 7px,
+  rgba(0, 0, 0, 0.17) 3px 0px 7px,
+  rgba(0, 0, 0, 0.09) 0px 0px 7px; 
+  transition-duration: 300ms;
+  transition-delay: 0ms;
+  scale: 1.01;
+}
+.homebox {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 4%;
+  height: auto;
+  width: clamp(100px, 53%, 700px);
+  margin-bottom: 20%;
+  margin-left: 2%;
+  margin-top: 50%;
+  background-color: #ffffff;
+  position: relative;
+}
+.person {
+  display: flex;
+  flex-direction: inline;
+  margin-bottom: clamp(70px, 25%, 300px);
+  margin-top: 3%;
+  animation: homeanimation;
+  animation-timeline: view(90% 20%);
+}
+.greet {
+  font-size: clamp(2px, 3vw, 150px);
+  font-weight: 450;
+
+  padding-bottom: 16%;
+  animation: greet-appear both;
+  animation-duration: 2s;
+  animation-delay: 1200ms;
+  background-color: rgba(255, 255, 255, 0);
+}
+@keyframes greet-appear {
+  from {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.name{
+  padding-bottom: 6%;
+  position: absolute;
+  font-size: clamp(5px, 4.7vw, 300px);
+  font-weight: 780;
+  z-index: 1;
+  animation: text-appear1 both;
+  animation-duration: 1200ms;
+  animation-delay: 600ms;
+}
+.want{
+  position: relative;
+  font-size: clamp(2px, 3vw, 150px);
+  font-weight: 570;
+  z-index: 1;
+  animation: text-appear2 both;
+  animation-duration: 1200ms;
+  animation-delay: 600ms;
+}
+.name, .want {
+  margin-right: 1.5%;
+
+  }
+@keyframes text-appear1 {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes text-appear2 {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.nande {
+  color: black;
+}
+.mottobox {
+  background-color: rgba(255, 255, 255, 0);
+  position: static;
+  height: 1000%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.motto {
+  margin-top: 55%;
+  margin-bottom: 75%;
+  font-size: clamp(-100px, 3vh, 75px);
+  animation: motto-appear both;
+  animation-timeline: view(10% 5%);
+}
+@keyframes motto-appear {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.dowhat {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.5%;
+  animation: dowhat-appear both;
+  animation-timeline: view(90% 20%);
+}
+@keyframes dowhat-appear {
+  from {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.aboutbox {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 30%;
+  padding: 10px;
+  animation: page-appear both;
+  animation-duration: 600ms;
+  animation-delay: 300ms;
+}
+.educbox {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 30%;
+  padding: 10px;
+  animation: page-appear both;
+  animation-duration: 600ms;
+  animation-delay: 300ms;
+}
+.journeybox {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 30%;
+  padding: 10px;
+  animation: page-appear both;
+  animation-duration: 600ms;
+  animation-delay: 300ms;
+}
+.contactbox {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 30%;
+  padding: 10px;
+  animation: page-appear both;
+  animation-duration: 600ms;
+  animation-delay: 300ms;
+}
+@keyframes page-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+section {
+  scroll-margin-top: 100px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 6%;
+  background-color: rgba(0, 0, 0, 0);
+  height: clamp(100px,45vh, 300px);
+  width: 100%;
+}

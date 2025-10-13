@@ -11,7 +11,7 @@
 body.dark-mode {
     --bg-color: #121212;
     --text-color: #eeeeee;
-    --primary-color: #00aaff;
+    --primary-color: #016a9e;
     --bubble-bg: #1e1e1e;
     --shadow-color: rgba(255, 255, 255, 0.08);
     --border-color: #333;
@@ -171,10 +171,9 @@ h2 { font-size: 2.5rem; }
 }
 
 .profile-img:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
-
 
 .home-content p {
     font-size: 1.2rem;
@@ -444,4 +443,3 @@ h2 { font-size: 2.5rem; }
     }
 
 }
-

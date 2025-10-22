@@ -162,7 +162,7 @@ h2 { font-size: 2.5rem; }
 
 .profile-img {
     width: 300px;
-    height: 350px;
+    height: auto;
     border-radius: 40%;
     object-fit: cover;
     margin-bottom: 1.5rem;
@@ -437,9 +437,10 @@ h2 { font-size: 2.5rem; }
     .bubble-box { padding: 2rem; }
 
     .profile-img {
-    width: 150px;
-    height: 170px;
+    width: 200px;
+    height: auto;
     border-radius: 30%;
     }
 
 }
+

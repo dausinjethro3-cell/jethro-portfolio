@@ -1,28 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- DOM Element References ---
+
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const themeToggle = document.getElementById('theme-toggle');
     
-    // The profile image element (Requires ID="profileImage" in HTML)
+
     const profileImage = document.getElementById('profileImage'); 
     
-    // Image source paths (using corrected forward slashes)
+
     const lightSrc = 'assets/profile/profile-light.jpg';
     const darkSrc = 'assets/profile/profile-dark.jpg';
 
-    // --- Image Switching Function ---
-    // This function sets the profile image based on the current mode
+
     const updateProfileImage = (isDark) => {
         if (profileImage) {
             profileImage.src = isDark ? darkSrc : lightSrc;
         }
     };
     
-    // --- Theme (Dark/Light Mode) Logic ---
+
     
-    // Function to check system preference on first visit
+
     const checkSystemPreference = () => {
         // Only check system preference if no theme is saved in localStorage
         if (!localStorage.getItem('theme')) {
@@ -33,13 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Initialize Theme and Image on Load
     let currentTheme = localStorage.getItem('theme');
     
-    // 1. Check system preference first (to handle users who haven't manually toggled)
+
     checkSystemPreference();
 
-    // 2. Apply theme based on saved preference OR system preference
+
     const isDarkModeActive = document.body.classList.contains('dark-mode') || currentTheme === 'dark';
 
     if (isDarkModeActive) {
@@ -52,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // Theme Toggle Click Handler
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         
@@ -71,19 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProfileImage(isDark); // Switch image based on manual toggle
     });
 
-    // --- Hamburger Menu Toggle ---
+
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
+
     document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     }));
 
-    // --- Scroll Animations ---
+
     const scrollSections = document.querySelectorAll('.scroll-section');
     const observerOptions = {
         root: null,
@@ -104,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(section);
     });
 
-    // --- Active Nav Link on Scroll ---
+
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -124,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => navObserver.observe(section));
 
 
-    // --- Gallery Modal Logic ---
     const modal = document.getElementById('gallery-modal');
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-title');
@@ -153,4 +149,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 

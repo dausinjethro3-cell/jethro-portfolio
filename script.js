@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const checkSystemPreference = () => {
-        // Only check system preference if no theme is saved in localStorage
+
         if (!localStorage.getItem('theme')) {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (prefersDark) {
@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDarkModeActive) {
         document.body.classList.add('dark-mode');
         themeToggle.textContent = 'Dark Mode';
-        updateProfileImage(true); // Set dark image
+        updateProfileImage(true);
     } else {
         themeToggle.textContent = 'Light Mode';
-        updateProfileImage(false); // Set light image
+        updateProfileImage(false);
     }
 
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         localStorage.setItem('theme', theme);
-        updateProfileImage(isDark); // Switch image based on manual toggle
+        updateProfileImage(isDark);
     });
 
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    }, { threshold: 0.5 }); // Adjust threshold as needed
+    }, { threshold: 0.5 }); 
     
     sections.forEach(section => navObserver.observe(section));
 
@@ -149,5 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 

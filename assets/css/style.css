@@ -1,20 +1,21 @@
-
+/* --- Root Variables & Base Styles --- */
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
-    --primary-color: #007bff;
+    --primary-color: #72ff7e;
     --bubble-bg: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --border-color: #eee;
+    --techstack-color: 
 }
 
 body.dark-mode {
     --bg-color: #121212;
-    --text-color: #eeeeee;
-    --primary-color: #016a9e;
-    --bubble-bg: #1e1e1e;
-    --shadow-color: rgba(255, 255, 255, 0.08);
-    --border-color: #333;
+    --text-color: #fcecec;
+    --primary-color: #003605;
+    --bubble-bg: #0e0e0e;
+    --shadow-color: rgba(32, 32, 32, 0.685);
+    --border-color: #ffffff;
 }
 
 * {
@@ -162,7 +163,7 @@ h2 { font-size: 2.5rem; }
 
 .profile-img {
     width: 300px;
-    height: auto;
+    height: 350px;
     border-radius: 40%;
     object-fit: cover;
     margin-bottom: 1.5rem;
@@ -229,6 +230,13 @@ h2 { font-size: 2.5rem; }
     margin-top: 2rem;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 3fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    }
+
 .gallery-item {
     cursor: pointer;
     overflow: hidden;
@@ -259,7 +267,7 @@ h2 { font-size: 2.5rem; }
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 10px 10px;
     transition: transform 0.3s ease;
 }
 
@@ -274,11 +282,7 @@ h2 { font-size: 2.5rem; }
 }
 
 .tech-item:hover {
-    transform: translateY(-5px);
-}
-
-.tech-item:hover img {
-    filter: drop-shadow(0 4px 8px var(--primary-color));
+    transform: scale(1.1);
 }
 
 .contact-form {
@@ -437,10 +441,30 @@ h2 { font-size: 2.5rem; }
     .bubble-box { padding: 2rem; }
 
     .profile-img {
-    width: 200px;
-    height: auto;
+    width: 150px;
+    height: 170px;
     border-radius: 30%;
     }
 
-}
+    .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    }
+    
 
+    .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    }
+    
+    .tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 3fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+}
